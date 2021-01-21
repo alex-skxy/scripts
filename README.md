@@ -4,15 +4,15 @@ I cannot guarantee that any of these scripts works 100% and will not f up your s
 
 - [scripts](#scripts)
 - [fixes](#fixes)
-  * [[conf-pen](https://github.com/alex-skxy/scripts/blob/main/fixes/conf-pen)](#-conf-pen--https---githubcom-alex-skxy-scripts-blob-main-fixes-conf-pen-)
-  * [[conf-rotate-input](https://github.com/alex-skxy/scripts/blob/main/fixes/conf-rotate-input)](#-conf-rotate-input--https---githubcom-alex-skxy-scripts-blob-main-fixes-conf-rotate-input-)
-  * [[conf-screen-input](https://github.com/alex-skxy/scripts/blob/main/fixes/conf-screen-input)](#-conf-screen-input--https---githubcom-alex-skxy-scripts-blob-main-fixes-conf-screen-input-)
+  * [conf-pen](#-conf-pen--https---githubcom-alex-skxy-scripts-blob-main-fixes-conf-pen-)
+  * [conf-rotate-input](#-conf-rotate-input--https---githubcom-alex-skxy-scripts-blob-main-fixes-conf-rotate-input-)
+  * [conf-screen-input](#-conf-screen-input--https---githubcom-alex-skxy-scripts-blob-main-fixes-conf-screen-input-)
 - [ffmpeg](#ffmpeg)
-  * [[crop](https://github.com/alex-skxy/scripts/blob/main/ffmpeg/crop)](#-crop--https---githubcom-alex-skxy-scripts-blob-main-ffmpeg-crop-)
-  * [[cut](https://github.com/alex-skxy/scripts/blob/main/ffmpeg/cut)](#-cut--https---githubcom-alex-skxy-scripts-blob-main-ffmpeg-cut-)
-  * [[draw_box](https://github.com/alex-skxy/scripts/blob/main/ffmpeg/draw_box)](#-draw-box--https---githubcom-alex-skxy-scripts-blob-main-ffmpeg-draw-box-)
-  * [[draw_text](https://github.com/alex-skxy/scripts/blob/main/ffmpeg/draw_text)](#-draw-text--https---githubcom-alex-skxy-scripts-blob-main-ffmpeg-draw-text-)
-  * [[tomp4](https://github.com/alex-skxy/scripts/blob/main/ffmpeg/tomp4)](#-tomp4--https---githubcom-alex-skxy-scripts-blob-main-ffmpeg-tomp4-)
+  * [crop](#-crop--https---githubcom-alex-skxy-scripts-blob-main-ffmpeg-crop-)
+  * [cut](#-cut--https---githubcom-alex-skxy-scripts-blob-main-ffmpeg-cut-)
+  * [draw_box](#-draw-box--https---githubcom-alex-skxy-scripts-blob-main-ffmpeg-draw-box-)
+  * [draw_text](#-draw-text--https---githubcom-alex-skxy-scripts-blob-main-ffmpeg-draw-text-)
+  * [tomp4](#-tomp4--https---githubcom-alex-skxy-scripts-blob-main-ffmpeg-tomp4-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
