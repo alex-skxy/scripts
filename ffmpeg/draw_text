@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ffmpeg -i "$1" -vf drawtext="fontfile=/usr/share/fonts/truetype/DejaVuSans-Bold.ttf: \
+text="$3": fontcolor=black: fontsize=42: \
+x=(5)/2: y=(5)" -codec:a copy "$2"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+PEN_DEVICE_ID="$(xinput list | grep -Ei 'Pen' | grep -oEi 'id=[0-9]*' | grep -oEi '[0-9]*')"
+xinput set-button-map $PEN_DEVICE_ID 1 3 2

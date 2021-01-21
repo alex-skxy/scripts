@@ -1,0 +1,4 @@
+#!/bin/bash
+echo 'input the time in format hh:mm:ss"
+ffmpeg -i "$1" -ss "$2" -to "$3" -c copy "$4"
+

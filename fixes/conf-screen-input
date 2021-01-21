@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SCREEN='eDP-1'
+PEN_DEVICE_ID="$(xinput list | grep -Ei 'Pen' | grep -oEi 'id=[0-9]*' | grep -oEi '[0-9]*')"
+ERASER_DEVICE_ID="$(xinput list | grep -Ei 'Eraser' | grep -oEi 'id=[0-9]*' | grep -oEi '[0-9]*')"
+
+xinput --map-to-output $PEN_DEVICE_ID "$SCREEN"
+xinput --map-to-output $ERASER_DEVICE_ID "$SCREEN"

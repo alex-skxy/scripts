@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ffmpeg -i "$1" -vf "drawbox=enable='between(n,0,17)' : x=0 : y=0 : w=480 \
+: h=91 : color=white : t=max" -codec:a copy "$2"

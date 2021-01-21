@@ -1,0 +1,63 @@
+#!/bin/bash
+
+StylusDevice='ELAN2514:00 04F3:2B0E Pen (0)'
+StylusEraserDevice='ELAN2514:00 04F3:2B0E Eraser (0)'
+Screen='eDP-1'
+
+screenRotation=$(xrandr --query --verbose | grep "$Screen" | cut -d ' ' -f 6)
+
+# Matrix for rotation
+# ⎡ 1 0 0 ⎤
+# ⎜ 0 1 0 ⎥
+# ⎣ 0 0 1 ⎦
+normal='1 0 0 0 1 0 0 0 1'
+
+#⎡ -1  0 1 ⎤
+#⎜  0 -1 1 ⎥
+#⎣  0  0 1 ⎦
+inverted='-1 0 1 0 -1 1 0 0 1'
+
+# 90° to the left 
+# ⎡ 0 -1 1 ⎤
+# ⎜ 1  0 0 ⎥
+# ⎣ 0  0 1 ⎦
+left='0 -1 1 1 0 0 0 0 1'
+
+# 90° to the right
+#⎡  0 1 0 ⎤
+#⎜ -1 0 1 ⎥
+#⎣  0 0 1 ⎦
+right='0 1 0 -1 0 1 0 0 1'
+
+if [ $screenRotation == 'left' ]
+then
+  echo "Upside down"
+  xrandr --output "$Screen" --rotate inverted
+  xinput set-prop "$StylusDevice" 'Coordinate Transformation Matrix' $inverted
+  xinput set-prop "$StylusEraserDevice" 'Coordinate Transformation Matrix' $normal
+  xinput --map-to-output "$StylusDevice" "$Screen"
+  xinput --map-to-output "$StylusEraserDevice" "$Screen"
+elif [ $screenRotation == 'normal' ]
+then
+  echo "90° to the left"
+  xrandr --output "$Screen" --rotate left
+  xinput set-prop "$StylusDevice" 'Coordinate Transformation Matrix' $left
+  xinput set-prop "$StylusEraserDevice" 'Coordinate Transformation Matrix' $normal
+  xinput --map-to-output "$StylusDevice" "$Screen"
+  xinput --map-to-output "$StylusEraserDevice" "$Screen"
+elif [ $screenRotation == 'inverted' ]
+then
+  echo "90° to the right"
+  xrandr --output "$Screen" --rotate right
+  xinput set-prop "$StylusDevice" 'Coordinate Transformation Matrix' $right
+  xinput set-prop "$StylusEraserDevice" 'Coordinate Transformation Matrix' $normal
+  xinput --map-to-output "$StylusDevice" "$Screen"
+  xinput --map-to-output "$StylusEraserDevice" "$Screen"
+else
+  echo "Back to normal"
+  xrandr --output "$Screen" --rotate normal
+  xinput set-prop "$StylusDevice" 'Coordinate Transformation Matrix' $normal
+  xinput set-prop "$StylusEraserDevice" 'Coordinate Transformation Matrix' $normal
+  xinput --map-to-output "$StylusDevice" "$Screen"
+  xinput --map-to-output "$StylusEraserDevice" "$Screen"
+fi
