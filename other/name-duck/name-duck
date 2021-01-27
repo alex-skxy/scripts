@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DOWNLOADS_DIRECTORY=''
+
+deno run --allow-env --allow-read=$DOWNLOADS_DIRECTORY --allow-write=$DOWNLOADS_DIRECTORY name-duck.ts $DOWNLOADS_DIRECTORY
